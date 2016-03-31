@@ -24,9 +24,11 @@ class ViewController: UIViewController, SegueHandlerType {
         switch segueIdentifierForSegue(segue) {
             
         case .TheRedPillExperience:
-            print("😈")
+            let redPillVC = segue.destinationViewController as? RedPillViewController
+            redPillVC?.mainText = "😈"
         case .TheBluePillExperience:
-            print("👼")
+            let bluePillVC = segue.destinationViewController as? BluePillViewController
+            bluePillVC?.mainText = "👼"
         }
     }
     

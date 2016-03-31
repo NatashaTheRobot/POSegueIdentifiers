@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA28CB911CAD7B860064E526 /* RedPillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28CB901CAD7B860064E526 /* RedPillViewController.swift */; };
+		FA28CB931CAD7B920064E526 /* BluePillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28CB921CAD7B920064E526 /* BluePillViewController.swift */; };
 		FAE7B5791C239EFF00F2FB37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE7B5781C239EFF00F2FB37 /* AppDelegate.swift */; };
 		FAE7B57B1C239EFF00F2FB37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE7B57A1C239EFF00F2FB37 /* ViewController.swift */; };
 		FAE7B57E1C239EFF00F2FB37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE7B57C1C239EFF00F2FB37 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA28CB901CAD7B860064E526 /* RedPillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedPillViewController.swift; sourceTree = "<group>"; };
+		FA28CB921CAD7B920064E526 /* BluePillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluePillViewController.swift; sourceTree = "<group>"; };
 		FAE7B5751C239EFF00F2FB37 /* POSegueIdentifiers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POSegueIdentifiers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE7B5781C239EFF00F2FB37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAE7B57A1C239EFF00F2FB37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 			children = (
 				FAE7B5781C239EFF00F2FB37 /* AppDelegate.swift */,
 				FAE7B57A1C239EFF00F2FB37 /* ViewController.swift */,
+				FA28CB901CAD7B860064E526 /* RedPillViewController.swift */,
+				FA28CB921CAD7B920064E526 /* BluePillViewController.swift */,
 				FAE7B5A61C23A3B100F2FB37 /* SegueHandlerType.swift */,
 				FAE7B57C1C239EFF00F2FB37 /* Main.storyboard */,
 				FAE7B57F1C239EFF00F2FB37 /* Assets.xcassets */,
@@ -260,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE7B5A71C23A3B100F2FB37 /* SegueHandlerType.swift in Sources */,
+				FA28CB911CAD7B860064E526 /* RedPillViewController.swift in Sources */,
+				FA28CB931CAD7B920064E526 /* BluePillViewController.swift in Sources */,
 				FAE7B57B1C239EFF00F2FB37 /* ViewController.swift in Sources */,
 				FAE7B5791C239EFF00F2FB37 /* AppDelegate.swift in Sources */,
 			);
@@ -486,6 +494,7 @@
 				FAE7B59F1C239EFF00F2FB37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAE7B5A01C239EFF00F2FB37 /* Build configuration list for PBXNativeTarget "POSegueIdentifiersTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +503,7 @@
 				FAE7B5A21C239EFF00F2FB37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAE7B5A31C239EFF00F2FB37 /* Build configuration list for PBXNativeTarget "POSegueIdentifiersUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +512,7 @@
 				FAE7B5A51C239EFF00F2FB37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
