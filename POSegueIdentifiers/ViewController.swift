@@ -25,10 +25,10 @@ class ViewController: UIViewController, SegueHandlerType {
             
         case .TheRedPillExperience:
             let redPillVC = segue.destinationViewController as? RedPillViewController
-            redPillVC?.mainText = "😈"
+            redPillVC?.inject("😈")
         case .TheBluePillExperience:
             let bluePillVC = segue.destinationViewController as? BluePillViewController
-            bluePillVC?.mainText = "👼"
+            bluePillVC?.inject("👼")
         }
     }
     

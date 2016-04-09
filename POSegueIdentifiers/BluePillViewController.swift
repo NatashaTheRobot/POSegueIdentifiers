@@ -8,16 +8,26 @@
 
 import UIKit
 
-class BluePillViewController: UIViewController {
+class BluePillViewController: UIViewController, Injectable {
 
     @IBOutlet weak private var mainLabel: UILabel!
     
-    var mainText: String!
+    typealias T = String
+    private var mainText: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        assertDependencies()
         mainLabel.text = mainText
     }
 
+    // Injectable
+    func inject(thing: T) {
+        mainText = thing
+    }
+    
+    func assertDependencies() {
+        assert(mainText != nil)
+    }
 }

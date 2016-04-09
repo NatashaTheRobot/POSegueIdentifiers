@@ -8,16 +8,39 @@
 
 import UIKit
 
-class RedPillViewController: UIViewController {
+protocol Injectable {
+
+    associatedtype T
+    func inject(thing: T)
+    func assertDependencies()
+}
+
+class RedPillViewController: UIViewController, Injectable {
 
     @IBOutlet weak private var mainLabel: UILabel!
     
-    var mainText: String!
+    typealias T = String
+    
+    // this is my original dependency (IOU)
+    // I can now make this private!
+    private var mainText: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // this will crash if the IOU is not set
+        assertDependencies()
+        
+        
         mainLabel.text = mainText
     }
-
+    
+    // Injectable
+    func inject(thing: T) {
+        mainText = thing
+    }
+    
+    func assertDependencies() {
+        assert(mainText != nil)
+    }
 }
