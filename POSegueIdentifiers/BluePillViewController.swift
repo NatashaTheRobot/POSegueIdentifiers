@@ -10,10 +10,10 @@ import UIKit
 
 class BluePillViewController: UIViewController, Injectable {
 
-    @IBOutlet weak private var mainLabel: UILabel!
+    @IBOutlet weak fileprivate var mainLabel: UILabel!
     
     typealias T = String
-    private var mainText: String!
+    fileprivate var mainText: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ class BluePillViewController: UIViewController, Injectable {
     }
 
     // Injectable
-    func inject(thing: T) {
+    func inject(_ thing: T) {
         mainText = thing
     }
     
