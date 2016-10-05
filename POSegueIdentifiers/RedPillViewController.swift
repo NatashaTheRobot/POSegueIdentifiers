@@ -11,19 +11,19 @@ import UIKit
 protocol Injectable {
 
     associatedtype T
-    func inject(thing: T)
+    func inject(_ thing: T)
     func assertDependencies()
 }
 
 class RedPillViewController: UIViewController, Injectable {
 
-    @IBOutlet weak private var mainLabel: UILabel!
+    @IBOutlet weak fileprivate var mainLabel: UILabel!
     
     typealias T = String
     
     // this is my original dependency (IOU)
     // I can now make this private!
-    private var mainText: String!
+    fileprivate var mainText: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class RedPillViewController: UIViewController, Injectable {
     }
     
     // Injectable
-    func inject(thing: T) {
+    func inject(_ thing: T) {
         mainText = thing
     }
     

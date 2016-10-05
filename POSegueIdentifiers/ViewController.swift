@@ -19,24 +19,24 @@ class ViewController: UIViewController, SegueHandlerType {
         super.viewDidLoad()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         switch segueIdentifierForSegue(segue) {
             
         case .TheRedPillExperience:
-            let redPillVC = segue.destinationViewController as? RedPillViewController
+            let redPillVC = segue.destination as? RedPillViewController
             redPillVC?.inject("😈")
         case .TheBluePillExperience:
-            let bluePillVC = segue.destinationViewController as? BluePillViewController
+            let bluePillVC = segue.destination as? BluePillViewController
             bluePillVC?.inject("👼")
         }
     }
     
-    @IBAction func onRedPillButtonTap(sender: AnyObject) {
+    @IBAction func onRedPillButtonTap(_ sender: AnyObject) {
         performSegueWithIdentifier(.TheRedPillExperience, sender: self)
     }
 
-    @IBAction func onBluePillButtonTap(sender: AnyObject) {
+    @IBAction func onBluePillButtonTap(_ sender: AnyObject) {
         performSegueWithIdentifier(.TheBluePillExperience, sender: self)
     }
 }
